@@ -1,4 +1,4 @@
-name: Run Java Program
+name: Run Java Demo
 
 on: [push]
 
@@ -8,16 +8,16 @@ jobs:
 
     steps:
       - name: Checkout Code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Setup Java
-        uses: actions/setup-java@v3
+        uses: actions/setup-java@v4
         with:
-          distribution: 'temurin'
-          java-version: '17'
+          distribution: 'oracle'
+          java-version: '21'
 
-      - name: Compile Java Files
-        run: javac src/jenkins_project/*.java
+      - name: Compile
+        run: javac jenkins_project/Demo.java
 
       - name: Run Program
-        run: java -cp src jenkins_project.Main
+        run: echo -e "prasanna\n21" | java jenkins_project.Demo
