@@ -10,7 +10,7 @@ public class Demo {
 		Scanner sc = new Scanner(System.in);
 
         System.out.println("Enter the name: ");
-        String s1 = sc.next();   // or sc.nextLine() if names have spaces
+        String s1 = sc.nextLine();   // or sc.nextLine() if names have spaces
 
         System.out.println("Enter the age");
         int age = sc.nextInt();
