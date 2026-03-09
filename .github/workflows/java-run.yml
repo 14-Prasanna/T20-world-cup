@@ -17,7 +17,7 @@ jobs:
           java-version: '17'
 
       - name: Compile Java Files
-        run: javac *.java
+        run: javac src/jenkins_project/*.java
 
       - name: Run Program
-        run: java Main
+        run: java -cp src jenkins_project.Main
